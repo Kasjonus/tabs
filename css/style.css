@@ -1,0 +1,122 @@
+#desktop {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifs;
+  justify-content: center;
+  background: fixed no-repeat;
+  background-image:linear-gradient(60deg, #f19823 25%, rgba(0,0,0,0) 25%),
+  linear-gradient(350deg, #eea654 20%, rgba(0,0,0,0) 20%),
+  linear-gradient(125deg, rgba(0,0,0,0) 70%, #e78747 70%),
+  linear-gradient(125deg, #e79b29 45%, rgba(0,0,0,0) 45%),
+  linear-gradient(125deg, #dd8346 70%, rgba(0,0,0,0) 70%);
+  background: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=0.800000011920929&auto=format&fit=crop&w=1199&h=800&q=80&cs=tinysrgb&crop=")
+  fixed no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.ostyle {
+  width: 100px;
+  height: 100px;
+  background: inherit;
+  overflow: hidden;
+  left: calc(var(--x) * var(--normal));
+  top: calc(var(--y) * var(--normal));
+  position: absolute;
+  border-style: solid;
+  border-width: calc(5px * var(--normal));
+  border-color: rgba(255, 255, 255, 0.1);
+  resize: both;
+}
+
+.ostyle::before {
+  width: calc(100% + 50px);
+  height: 100%;
+  content: "";
+  position: absolute;
+  left: -25px;
+  background: inherit;
+  box-shadow: inset 100em 100em 100em 100em
+    rgba(255, 255, 255, 0.2);
+  filter: blur(10px);
+}
+
+.content {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  transform: translate(-10%, -10%);
+  margin-top: 34px;
+  margin-left: 18px;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+    color: black;
+    cursor: pointer;
+    line-height: 45px;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.control_min, .control_max, .control_close, .titlebar {
+  text-align: center;
+  line-height: 32px;
+  position: relative;
+  float: right;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  outline: 0;
+  transition: 0.2s;
+}
+.control_min:hover, .control_max:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.control_min:active, .control_max:active {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.control_close:hover {
+  background: rgba(255, 0, 0, 0.3);
+}
+.control_close:active {
+  background: rgba(255, 0, 0, 0.6);
+}
+
+.titlebar {
+  width: calc(100% - calc(32px * var(--c)));
+  float: left;
+}
+
+.close {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  background: url("https://img.icons8.com/small/32/000000/close-window.png");
+}
+
+.min {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  background: url("https://img.icons8.com/small/32/000000/minimize-window.png");
+}
+
+.max {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  background: url("https://img.icons8.com/small/32/000000/maximize-window.png");
+}
